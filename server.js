@@ -28,7 +28,7 @@ io.on('connection', (socket) => {
     });
 });
 
-const PORT = process.env.PORT || 3000;
-server.listen(PORT, () => {
-    console.log(`Serveris veikia ant porto ${PORT}`);
+const PORT = process.env.PORT || 3000;  // BŪTINA!
+server.listen(PORT, '0.0.0.0', () => {  // Pridėk '0.0.0.0' host'ą!
+    console.log(`Server listening on port ${PORT}`);
 });
